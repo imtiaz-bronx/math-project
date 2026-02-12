@@ -10,7 +10,7 @@ body {
     background-color: #4d9ca5;
     
     background:
-    linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)),
+    linear-gradient(rgba(173, 21, 173, 0.667), rgba(51, 48, 156, 0.668)),
     url("Pics/b3.png");
     background-repeat: no-repeat;
     background-position:center;
@@ -65,14 +65,14 @@ main {
     margin: 50px auto 10px auto;
     padding: 25px;
     text-align: center;
-    background-color:rgba(80, 117, 100, 0.55);
+    background-color:rgba(0, 0, 0, 0.781);
     
 }
 main h2 {
 font-family:"Amarante", serif;
 text-align: center;
 font-size: 4.2rem;
-color: #03054f;
+color: #1b8703;
 }
 
 main p{
@@ -147,6 +147,6 @@ color: azure;
 
 /* Hover effect */
 .btn:hover {
-    background-color: #2ca91e;
+    background-color: #2ca91edb;
     transform: translateY(-25px);
 }
