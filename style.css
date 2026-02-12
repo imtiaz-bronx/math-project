@@ -133,13 +133,13 @@ color: azure;
 /* Button style */
 .btn {
     font-family: "Permanent Marker";
-    font-size: 60px;
+    font-size: clamp(18px, 3vw, 60px);
     margin-top: 5px;
     filter: drop-shadow(0 0 2.0rem yellow);
     text-decoration:none;
     background-color:rgba(15, 23, 42, 0.85);
     color:white;
-    padding: 35px 65px;
+    padding: clamp(12px, 2vw, 35px) clamp(20px, 4vw, 65px);;
     border-radius: 10px;
     font-weight: bold;
     transition: background-color 0.3s ease, transform 0.15s ease;
