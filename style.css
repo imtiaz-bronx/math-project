@@ -29,7 +29,7 @@ body {
 }
 
 .logo {
-    width: 280px;
+    width: clamp(100px, 15vw, 280px);
     height: auto;
     flex-shrink: 10;
 }
@@ -43,7 +43,7 @@ body {
 .site-header h1 {
     font-family:"Ribeye", serif;
     margin: 0;
-    font-size: 8.5rem;
+    font-size: clamp(3rem, 6vw, 8.5rem);
     font-weight: 900;
     color: rgb(135, 9, 9);
 
@@ -52,7 +52,7 @@ body {
 .site-header p {
     font-family:"Ribeye", serif;
     margin-top: 10px;
-    font-size: 3.0rem;
+    font-size: clamp(1.2rem, 2.5vw, 3rem);
     color: rgb(5, 135, 36);
 }
 
@@ -60,7 +60,8 @@ main {
     filter: drop-shadow(0 0 0.2rem rgb(0, 0, 0));
     font-family: 'Times New Roman', Times, serif;
     align-items: center;
-    max-width:70%;
+    max-width: 1300px;
+    width: 95%;
     border-radius: 30px;
     margin: 50px auto 10px auto;
     padding: 25px;
@@ -69,17 +70,17 @@ main {
     
 }
 main h2 {
-font-family:"Amarante", serif;
+font-family:"Libertinus Math", system-ui;
 text-align: center;
-font-size: 4.2rem;
+font-size: clamp(1.8rem, 3vw, 4.2rem);
 color: #1b8703;
 }
 
 main p{
 padding: 2px;
 max-width: auto;
-font-family:fantasy;
-font-size:2.5rem;
+font-family:"Philosopher", sans-serif;
+font-size:clamp(1.1rem, 1.6vw, 2.8rem);
 color: azure;
 }
 
@@ -101,11 +102,11 @@ color: azure;
 
 /*Footer Style - Imtiaz Created By */
 .footer {
-    font-family: fantasy;
+    font-family:"MedievalSharp", cursive;
     margin:0;
-    font-size:35px;
+    font-size:clamp(16px, 2vw, 35px);
     text-align:center;
-    padding:0px;
+    padding:clamp(2px, 1vw, 5px);
     margin-top: auto;
     margin-bottom:0px;
     text-align: center;
@@ -114,7 +115,7 @@ color: azure;
 
 }
 .footer p{
-    font-size:3.5rem;
+    font-size:clamp(16px, 2vw, 35px);
     color: #0ac028;
 }
 
