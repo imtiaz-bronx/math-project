@@ -83,7 +83,18 @@ font-family:"Philosopher", sans-serif;
 font-size:clamp(1.1rem, 1.6vw, 2.8rem);
 color: azure;
 }
-
+.milestone-main {
+    max-width: 1500px;
+    width: 96%;
+    margin: 40px auto;
+    background-color:rgba(209, 196, 196, 0.803)
+}
+.milestone-main h3 {
+font-size:x-large;
+font-family:'Times New Roman', Times, serif;
+text-align:center;
+color: #0c7103;
+}
 
 
 /* Sections */
