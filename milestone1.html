@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Milestone 1 - Imtiaz Mahmud</title>
-    <link rel="stylesheet" href="style.css"
+    <title>M-1-Imtiaz</title>
+    <link rel="stylesheet" href="style.css">
     
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,7 +13,8 @@
 
 
 </head>
-<body>
+<body class="milestone-body">
+
      <header class="site-header">
     <img src="Pics/logo.png" alt="Logo" class="logo left">
 
@@ -25,12 +26,205 @@
     <img src="Pics/logo3.png" alt="Logo" class="logo right">
 </header>
 
+<main class="milestone-main">
 
-    <main class = "milestone-main">
+    <!-- Section 1 -->
+    <section class="content-section">
+               <div class="section-logo">
+                <img src="Pics/t_logo.png" alt="Taxi Logo Yellow Small"
+               </div>
+        <div class="section-text">
 
-        <h2> Coming Soon!</h2>
-  
-    </main>
+            <h2>Data Description and Assessment:</h2>
+            <h3> A Paragraph Intruducing the Data:-</h3>
+
+            <p>
+                I am using NYC Yellow Taxi Ride data from March 1 to 3 of 2023. 
+                I am using this data because I worked with data like this in Math 128 and Math 328.
+                I found this data in NYC Open Data. 
+                <a href="https://data.cityofnewyork.us/Transportation/2023-Yellow-Taxi-Trip-Data/4b4i-vvec/about_data">Click Here for Data</a>
+                I have also included the CSV file download button at the end of this page and can also be found in Github,
+                inside the folder name "Files/YTM123.csv". 
+            </p>
+            <p>
+                The data set was created by the New York City government for public use.
+                The data sets contain 19 columns. And each row is a taxi trip record. 
+                Some of the important rows are "passenger_counts", "tota_amount", "tip_amount" etc.
+                <a href="https://www.nyc.gov/assets/tlc/downloads/pdf/data_dictionary_trip_records_yellow.pdf"> Data Dictionary-Yellow Taxi Trip Records</a>
+            </p>
+
+            <h3>
+                Accessing the Data...
+            </h3>
+            <p>
+                The Structure of the data is rectangular. This is csv file with rows and columns that what makes this a rectangular shape data. 
+                The granularity of the data at the individual trip lavel. Each row in the DataFrame represents a single taxi trip, 
+                including where and when it started and ended, 
+                the distance traveled, and the various costs associated with that specific journey.
+            </p>
+
+            <p>
+                The scope and completeness of the data is pretty low. The datasets contain 234,244 total records for only 3 days worth of taxi ride.
+                If we want to calclute how taxi ride changes over seasons, holidays or other different time, we will not be able to do that with this data sets.
+                this 3-day window is too small.
+                (I was trying to use whole year of taxi ride, but the jupyter notebook wasn't loading)
+            </p>
+            
+                <p>The data includes two primary time-related columns: tpep_pickup_datetime and tpep_dropoff_datetime. 
+                    This data has the passenger pick up and drop off time. I think the time are very accurate becaue it was recorded by the computer of the taxi, 
+                    not by human input. 
+                Which makes it more accurate and less likely to have typo or other mistake.
+            </p>
+
+            <p>
+                The faithfullness of the data is medium. I think it captures the reality pretty good. In the csv it has 3 days worth of data, 24hrs/day.
+                Also there were some missing data. Around 6,039 rows with no values. So, it looses some point in faithfullness. 
+                
+            </p>
+
+         
+            
+    </section>
+
+    <!-- Section 2 -->
+    <section class="content-section">
+
+        <div class="section-text">
+        <h2>Cleaning the Data:</h2>
+        <p>
+            For this data so far, I only removed 6039 rows of missing rows. I also changed some Data Types using the "dtypes" function. 
+            No duplicaed data found...Removed a coma from the trip distance.
+        </p>
+        <h3> The Steps to Clean the Data</h3>
+        <p>
+            missing_rows = x.isna().any(axis = 1)
+            missing_rows.head()
+        </p>
+        <p>
+            missing_rows.sum()
+        </p>
+        <p>
+            ax =x[~missing_rows]
+            ax.head()
+        </p>
+        <p>
+            ax["trip_distance"] = ax["trip_distance"].str.replace(",","")
+
+        </p>
+
+        </div>
+
+
+
+    </section>
+
+
+    <!-- Section 3 -->
+    <section class="content-section">
+        <div class="section-text">
+            <h2>Singel Variable Distribution Plots - 4 Columns</h2>
+            <h3> 1st column - Number of Passenger per Rides</h3>
+        <div class="section-image">
+                <figure>
+                    <img src="Pics/p_1.png" alt="Histgram of Passenger Count">
+                    <figcaption>Figure 1. Number of Passenger per Rides</figcaption>
+                </figure>
+        </div>
+
+            <p>
+                In Figure 1, of the Histgeam we can see that most of the ride had only one passenger. 
+                There are some rides with 0 passenger, this might be some kind of typo or the taxi company taking the car to one place to another. 
+                But the intersting thing is that, most peopel just ride the yellow cabs by themself.
+            </p>
+
+
+            <h3>
+                C2 - Number of rides that paid congestion_surcharge
+            </h3>   
+
+             <div class="section-image">
+                <figure>
+                    <img src="Pics/p_2.png" alt="that paid congestion_surcharge">
+                    <figcaption>Figure 2. Number of rides that paid congestion_surcharge</figcaption>
+                </figure>
+
+            <p>
+                On the figure 2: graph, we can see that most of the trip paid <a href="https://www.nyc.gov/site/tlc/about/congestion-surcharge.page">congestion surcharge.</a>
+                These first two graph are wired for New York City. If traveling in the city by your self, why not take the Subway, save some money. But People 
+                would rather the taxi and pay congestion surcharge price to go lower Manhattan. 
+                Also this Figure2 graph tells is that most people took the taxi to go in lower Manhattan. 
+            </p>
+
+            <h3>
+                C4 - Tolls or No Tolls
+            </h3>
+                <div class="section-image">
+                <figure>
+                    <img src="Pics/p_3.png" alt="Histgram of Passenger Count">
+                    <figcaption>Figure 3. Number of rides that paid Tolls </figcaption>
+                </figure>
+            
+            <p>
+                This figure 3, graph tells us that most trip did not pay tolls. So we can conclude that most of them took place in side on one Borough, like 
+                Manhattan or Brooklyn etc. Very few travled outside of the Manhattan city center. 
+            </p>
+        
+        <h3>
+            C4 - Paynment Types
+        </h3>
+                <figure>
+                    <img src="Pics/p_4.jpg" alt="Bar chart of Type of Paynment">
+                    <figcaption>Figure 4. Number of rides with different type of paynment</figcaption>
+                </figure>  
+        
+        <p>
+            I wasn't very surprising that most people uses credit card in the US to pay for everything. Still there were many 
+            people who also used cash. This is a intersting chart that show us that even in NYC people still uses cash in 2023.
+        </p>
+
+    </section>
+<section class="content-section">
+        <div class="section-text">
+            <h2>Multi Variable Distribution Plots, 2 or more Variables, 2 Plots:</h2>
+            <h3> 1st Plot - Average Total Amount by Pickup Hours</h3>
+
+        <div class="section-image">
+                <figure>
+                    <img src="Pics/p_5.png" alt="Histgram of Passenger Count">
+                    <figcaption>Figure 5. Average Total Amount by Pickup Hours</figcaption>
+                </figure>
+        
+        <div class="section-image">
+                <figure>
+                    <img src="Pics/p_6.png" alt="Histgram of Passenger Count">
+                    <figcaption>Figure 6. Average Tips Amount by Pickup Hours</figcaption>
+                </figure>
+    
+    <p>
+        These two are very intersting graphs. Both of this graph uses two different columns at the same time. The 1st one uses, Date-time-houre and Average Total Amount
+        and the second one uses Date-time-hours with average Tips amount.
+    </p>
+    <p>
+        This tells us two diffrent story. On the first graph, Figure 5, we can see that people paid more in the early morning. 
+        and on the other hand, the total amount was lower in evening and late night, and people paid more tips, Figure 6.
+        
+    </p>
+    <p>
+        So, basically the lower the fare the higher the tips...
+    </p>
+
+</section>
+
+
+</main>
+
+<h3 class = "mile-h3">
+     Click Bellow to Download Jupyter Notebook and CSV</h3>
+<div class = "download-btn" >
+    <a href="Files/M1-Imtiaz.ipynb" class="d-btn">⍖ Download Notebook ⍖</a>
+    <a href="Files/YTM123.csv" class="d-btn">⍖ Download CSV File ⍖</a>
+</div>
+
 
     <footer class="footer">
     <p>Created By, Imtiaz Mahmud, CUNY-Lehman College, MATH 328, Spring 2026</p>

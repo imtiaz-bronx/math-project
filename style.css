@@ -17,6 +17,9 @@ body {
     background-size:cover;
     backdrop-filter: blur(0.8px);
 }
+.milestone-body {
+    background: #2924248f;   /* solid color only */
+}
 
 
 .site-header {
@@ -110,7 +113,12 @@ font-family:Domine;
 font-size:clamp(1.1rem, 1.6vw, 3.0rem);
 color: rgb(0, 2, 2);
 }
-
+.mile-h3{
+    font-size:clamp(1.1rem, 1.6vw, 3.0rem);
+    color: #000000;
+    background-color: #0ac02892;
+    text-align: center;
+}
 
 /* Sections */
 .section {
@@ -169,8 +177,7 @@ color: rgb(0, 2, 2);
     font-weight: bold;
     transition: background-color 0.3s ease, transform 0.15s ease;
     flex-wrap: wrap;
-    backdrop-filter: blur(1000px); 
-    -webkit-backdrop-filter: blur(1000px);
+ 
     border: 1px solid rgba(4, 0, 253, 30);  
 }
 
@@ -181,6 +188,33 @@ color: rgb(0, 2, 2);
     box-shadow: 0 10px 20px rgba(44, 169, 30, 0.4); /* Glow matches the button color */
     filter: drop-shadow(0 0 1.0rem #adff2f);
 }
+
+.download-btn{
+    justify-content:center;
+    gap: 210px;
+    margin-top: 5px;
+    margin-bottom: 30px;
+    font-size: 40px;
+    display:flex;
+    border-radius: 50px;
+    text-decoration: none;
+}
+.d-btn{
+    background-color: #0a77c065;
+    padding: 1rem;
+    color: #000000;
+    backdrop-filter: blur(1000px); 
+    -webkit-backdrop-filter: blur(1000px);
+    filter: drop-shadow(0 0 0.95rem rgb(29, 167, 11));
+     text-decoration:double;
+
+}
+.d-btn:hover{
+transform: translateY(-5px);
+box-shadow: 0 10px 20px rgba(235, 5, 170, 0.54); /* Glow matches the button color */
+filter: drop-shadow(0 0 1.0rem #e00d06);
+}
+
 
 @keyframes fadeUp {
     from {
@@ -193,8 +227,91 @@ color: rgb(0, 2, 2);
     }
 }
 
+/* ===== MAIN CONTAINER ===== */
+.milestone-main {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 20px;
+    background: #1c213243;
 
-@media (max-width: 768px) {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+
+/* ===== SECTION GRID ===== */
+.content-section {
+    display: grid;
+    gap: 30px;
+    background: rgb(255, 255, 255);
+    padding: 25px;
+    border-radius: 16px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.4);
+    align-items: center;
+}
+
+
+/* Text styling */
+.section-text h2 {
+    font-family: "Ribeye", serif;
+    font-size: clamp(1.8rem, 3vw, 2.8rem);
+    color: #128603;
+    margin-bottom: 15px;
+    text-align:center;
+
+}
+.section-text h3 {
+    display: flex;
+    justify-content: center;
+    font-family: "Ribeye", serif;
+    font-size: clamp(1rem, 2vw, 2.2rem);
+    color: #000000;
+    margin-bottom: 12px;
+    text-align:center;
+    color: rgb(2, 36, 1);
+    background-color: #bac00a5c;
+}
+
+
+.section-text p {
+    font-family:'Times New Roman', Times, serif;
+    font-size: clamp(1rem, 1.8vw, 2.1rem);
+    color: #000000;
+    line-height: 1.6;
+    text-align: left;
+    flex: 1;
+}
+
+
+/* Image styling */
+.section-image img {
+    align-items: end;
+    width:100%;
+    height:100%;
+    border-radius: 12px;
+}
+
+.section-image figcaption {
+    font-family:monospace;
+    background-color: #0ac0285d;
+    margin-top: 10px;
+    font-size: 1.5rem;
+    color: #444;
+    font-style: italic;
+}
+
+.section-logo img{
+    position:absolute;
+    top: 40px;
+    bottom:40px;
+    right: 20px;
+
+    width: 250px;
+    height: auto;
+}
+
+@media (max-width: 600px) {
 
   .site-header,
   .milestone-header {
@@ -216,6 +333,14 @@ color: rgb(0, 2, 2);
   .btn {
     font-size: 20px;
     padding: 12px 18px;
+  }
+  .download-btn{
+    font-size: 10px;
+    display: flex;
+    align-items: center;
+    gap: 5rem;
+    
+
   }
 
   .milestone-buttons {
