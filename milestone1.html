@@ -20,7 +20,7 @@
 
     <div class="header-text">
         <h1>Milestone ⑴</h1>
-        <p>Jupyter Notebook-Pythone</p>
+        <p>Data Assessment & Basis Ploting</p>
     </div>
 
     <img src="Pics/logo3.png" alt="Logo" class="logo right">
@@ -30,9 +30,7 @@
 
     <!-- Section 1 -->
     <section class="content-section">
-               <div class="section-logo">
-                <img src="Pics/t_logo.png" alt="Taxi Logo Yellow Small"
-               </div>
+               
         <div class="section-text">
 
             <h2>Data Description and Assessment:</h2>
@@ -49,7 +47,7 @@
             <p>
                 The data set was created by the New York City government for public use.
                 The data sets contain 19 columns. And each row is a taxi trip record. 
-                Some of the important rows are "passenger_counts", "tota_amount", "tip_amount" etc.
+                Some of the important rows are "passenger_counts", "tota_amount", "tip_amount" etc. To learn more about the data go to the link >>>
                 <a href="https://www.nyc.gov/assets/tlc/downloads/pdf/data_dictionary_trip_records_yellow.pdf"> Data Dictionary-Yellow Taxi Trip Records</a>
             </p>
 
@@ -58,7 +56,7 @@
             </h3>
             <p>
                 The Structure of the data is rectangular. This is csv file with rows and columns that what makes this a rectangular shape data. 
-                The granularity of the data at the individual trip lavel. Each row in the DataFrame represents a single taxi trip, 
+                The granularity of the data is at the individual trip lavel. Each row in the DataFrame represents a single taxi trip, 
                 including where and when it started and ended, 
                 the distance traveled, and the various costs associated with that specific journey.
             </p>
@@ -66,8 +64,8 @@
             <p>
                 The scope and completeness of the data is pretty low. The datasets contain 234,244 total records for only 3 days worth of taxi ride.
                 If we want to calclute how taxi ride changes over seasons, holidays or other different time, we will not be able to do that with this data sets.
-                this 3-day window is too small.
-                (I was trying to use whole year of taxi ride, but the jupyter notebook wasn't loading)
+                This 3-day window is too small.
+                (I was trying to use whole year of taxi ride, but the jupyter notebook was taking hours to load)
             </p>
             
                 <p>The data includes two primary time-related columns: tpep_pickup_datetime and tpep_dropoff_datetime. 
@@ -134,7 +132,8 @@
             <p>
                 In Figure 1, of the Histgeam we can see that most of the ride had only one passenger. 
                 There are some rides with 0 passenger, this might be some kind of typo or the taxi company taking the car to one place to another. 
-                But the intersting thing is that, most peopel just ride the yellow cabs by themself.
+                But the intersting thing is that, most peopel just ride the yellow cabs by themself. This is a surprising finding for a city like NYC, that has 
+                a useable public transportation system.
             </p>
 
 
@@ -150,9 +149,9 @@
 
             <p>
                 On the figure 2: graph, we can see that most of the trip paid <a href="https://www.nyc.gov/site/tlc/about/congestion-surcharge.page">congestion surcharge.</a>
-                These first two graph are wired for New York City. If traveling in the city by your self, why not take the Subway, save some money. But People 
+                <<< (To learn more about congestion surcharge, click that link.) These first two graph are wired for New York City. If traveling in the city by your self, why not take the Subway, save some money. But People 
                 would rather the taxi and pay congestion surcharge price to go lower Manhattan. 
-                Also this Figure2 graph tells is that most people took the taxi to go in lower Manhattan. 
+                Also this Figure2 graph tell us that most people took the taxi to go in lower Manhattan, or leaving from lower Manhattan. 
             </p>
 
             <h3>
@@ -178,8 +177,8 @@
                 </figure>  
         
         <p>
-            I wasn't very surprising that most people uses credit card in the US to pay for everything. Still there were many 
-            people who also used cash. This is a intersting chart that show us that even in NYC people still uses cash in 2023.
+            It wasn't very surprising that most people uses credit card in the US to pay for everything. Still there were many 
+            people who also used cash. This is a intersting chart that show us that even in city like New York people still uses cash in 2023.
         </p>
 
     </section>
@@ -210,7 +209,8 @@
         
     </p>
     <p>
-        So, basically the lower the fare the higher the tips...
+        So, basically the lower the fare the higher the tips...But the average tips are very small amount. 
+        The taxi driver will make more in midnight to early morning, when there are more fare and less tips.
     </p>
 
 </section>

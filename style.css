@@ -7,24 +7,23 @@ body {
     flex-direction: column;
     min-height: 100vh;
     
-    background-color: #4d9ca5;
+    background-color: #4d9ca57c;
     
     background:
-    linear-gradient(rgba(173, 21, 173, 0.667), rgba(51, 48, 156, 0.668)),
-    url("Pics/b3.png");
+    linear-gradient(rgba(173, 21, 173, 0.508), rgba(52, 48, 156, 0.499)),
+    url("Pics/b3.jpg");
     background-repeat: no-repeat;
     background-position:center;
     background-size:cover;
-    backdrop-filter: blur(0.8px);
 }
 .milestone-body {
-    background: #2924248f;   /* solid color only */
+    background: #2c1d1d8f;   /* solid color only */
 }
 
 
 .site-header {
     filter: drop-shadow(0 0 0.2rem rgb(0, 0, 0));
-    background-color: #1f2937c0;
+    background-color: #1f29378b;
     padding: 20px 40px;
 
     display: flex;
@@ -78,7 +77,7 @@ main {
     margin: 50px auto 10px auto;
     padding: 25px;
     text-align: center;
-    background-color:rgba(0, 0, 0, 0.781);
+    background-color:rgba(22, 10, 18, 0.481);
     backdrop-filter: blur(12px); 
     -webkit-backdrop-filter: blur(12px); /* For Safari */
     border: 1px solid rgba(253, 0, 0, 10);
@@ -90,7 +89,7 @@ main h2 {
 font-family:"Ribeye", serif;
 text-align: center;
 font-size: clamp(1.8rem, 3vw, 4.2rem);
-color: #1b8703;
+color: #33bb14;
 }
 
 main p{
@@ -98,7 +97,7 @@ padding: 2px;
 max-width: auto;
 font-family:Domine;
 font-size:clamp(1.1rem, 1.6vw, 3.0rem);
-color: azure;
+color: rgb(255, 255, 255);
 }
 .milestone-main {
     max-width: 1500px;
@@ -144,8 +143,8 @@ color: rgb(0, 2, 2);
     margin-top: auto;
     margin-bottom:0px;
     text-align: center;
-    background-color: #222219bb;
-    filter: drop-shadow(0 0 0.2rem rgb(0, 0, 0));
+    background-color: #22221981;
+    filter: drop-shadow(0 0 0.2rem rgba(0, 0, 0, 0.548));
 
 }
 .footer p{
@@ -170,7 +169,7 @@ color: rgb(0, 2, 2);
     margin-top: 5px;
     filter: drop-shadow(0 0 2.0rem yellow);
     text-decoration:none;
-    background-color:rgba(15, 23, 42, 0.787);
+    background-color:rgba(15, 23, 42, 0.539);
     color:white;
     padding: clamp(12px, 2vw, 35px) clamp(20px, 4vw, 65px);;
     border-radius: 10px;
@@ -200,7 +199,7 @@ color: rgb(0, 2, 2);
     text-decoration: none;
 }
 .d-btn{
-    background-color: #0a77c065;
+    background-color: #0a77c069;
     padding: 1rem;
     color: #000000;
     backdrop-filter: blur(1000px); 
@@ -301,15 +300,6 @@ filter: drop-shadow(0 0 1.0rem #e00d06);
     font-style: italic;
 }
 
-.section-logo img{
-    position:absolute;
-    top: 40px;
-    bottom:40px;
-    right: 20px;
-
-    width: 250px;
-    height: auto;
-}
 
 @media (max-width: 600px) {
 
