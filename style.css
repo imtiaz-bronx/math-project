@@ -161,7 +161,7 @@ color: rgb(0, 2, 2);
     gap: 50px;
     margin: 50px 0;
     font-size: 50px;
-    display:flex; 
+    display:flex;
 }
 
 /* Button style */
@@ -173,6 +173,7 @@ color: rgb(0, 2, 2);
     text-decoration:none;
     background-color:rgba(15, 23, 42, 0.539);
     color:white;
+    cursor: url("Pics/m1.png"),auto;
     padding: clamp(12px, 2vw, 35px) clamp(20px, 4vw, 65px);;
     border-radius: 10px;
     font-weight: bold;
@@ -305,4 +306,5 @@ filter: drop-shadow(0 0 1.0rem #e00d06);
 a {
   color:tomato;
   text-decoration:solid;
+  cursor: url("Pics/link3.png"),auto;
 }
