@@ -304,7 +304,7 @@ filter: drop-shadow(0 0 1.0rem #e00d06);
 }
 
 a {
-  color:tomato;
-  text-decoration:solid;
-  cursor: url("Pics/link3.png"),auto;
+  color:rgb(23, 2, 117);
+  text-decoration:underline;
+  cursor: url("Pics/link4.png"),auto;
 }
