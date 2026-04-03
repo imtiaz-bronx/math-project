@@ -18,7 +18,7 @@ body {
     background-size:cover;
 }
 .milestone-body {
-    background: #2c1d1d8f;   /* solid color only */
+    background: #000000a6;   /* solid color only */
 }
 
 
@@ -59,6 +59,11 @@ body {
     opacity: 0%;
     animation: fadeUp 0.3s ease-out forwards;
 
+}
+.site-header h2 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size:clamp(1rem, 2vw, 3rem);
+    color: aqua;
 }
 
 .site-header p {
@@ -160,19 +165,19 @@ color: rgb(0, 2, 2);
     justify-content: center;
     gap: 50px;
     margin: 50px 0;
-    font-size: 50px;
+    font-size: 100px;
     display:flex;
 }
 
 /* Button style */
 .btn {
     font-family: "Permanent Marker";
-    font-size: clamp(18px, 3vw, 60px);
+    font-size: clamp(40px, 5vw, 80px);
     margin-top: 5px;
     filter: drop-shadow(0 0 2.0rem yellow);
     text-decoration:none;
     background-color:rgba(15, 23, 42, 0.539);
-    color:white;
+    color:rgb(2, 14, 70);
     cursor: url("Pics/m1.png"),auto;
     padding: clamp(12px, 2vw, 35px) clamp(20px, 4vw, 65px);;
     border-radius: 10px;
@@ -186,7 +191,7 @@ color: rgb(0, 2, 2);
 /* Hover effect */
 .btn:hover {
     background-color: #2ca91edb;
-    transform: translateY(-10px);
+    transform: translateY(-15px);
     box-shadow: 0 10px 20px rgba(44, 169, 30, 0.4); /* Glow matches the button color */
     filter: drop-shadow(0 0 1.0rem #adff2f);
 }
