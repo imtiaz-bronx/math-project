@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>M-1-Imtiaz</title>
+    <title>Imtiaz Math</title>
     <link rel="stylesheet" href="style.css">
     
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -19,8 +19,8 @@
     <img src="Pics/logo.png" alt="Logo" class="logo left">
 
     <div class="header-text">
-        <h1>Milestone ⑴</h1>
-        <p>Data Assessment & Basis Ploting</p>
+        <h1> All Milestones </h1>
+        <p>Data Assessment, Ploting & Modeling</p>
     </div>
 
     <img src="Pics/logo3.png" alt="Logo" class="logo right">
@@ -32,7 +32,7 @@
     <section class="content-section">
                
         <div class="section-text">
-
+            <h1> Milestone 1</h1>
             <h2>Data Description and Assessment:</h2>
             <h3> A Paragraph Intruducing the Data:-</h3>
 
@@ -218,6 +218,64 @@
 
 
 </main>
+
+<main class="milestone-main"> 
+        <section class = "content-section">
+        <div class=" section-text">
+            <h1>
+                Milestone 2 - Models
+            </h1>
+            <h2>
+                Step 8 - Model 1
+            </h2>
+            <h3>
+                Linear regression Model
+            </h3>
+            <p>
+                In this step 8, I used a Linear Regression Model to predict the total taxi fare amount <b>"total_amount"</b>. 
+                By using this model my goal was to understand how different variables change the total cost of a taxi ride. 
+            </p>
+            <p>
+                Before I run the model, I had to remove one big outlier from my data. I found out this when making a graph after I created my model. 
+                I used the code <i>data2 = data2[data2['trip_distance'] < 150]</i> to remove any trip distance values above 150 miles. 
+                After I removed this, both of my model in step 8 improved a lot. Most trip distance were between 1 to 50 miles.
+            </p>
+
+            <h3>
+                First Model OLS Summary ( )
+            </h3>
+        <div class="section-image">
+                <figure>
+                    <img src="M2_Files/first_m.png" alt="OLS Regression Results of Independent and Dependent Variables.">
+                    <figcaption>Figure 7. OLS Regression Results, 1st Model, Step 8, Linear Regression</figcaption>
+                </figure>
+
+            <p>
+                For the first model, I only used the <b>trip distance </b> and <b> passenger counts</b> as independent variables. 
+                The R-Squared = 0.797, looks very good when using just two variables as independent variables. The Mean Squared Error is 90.22. 
+            </p>
+            <h3>
+                Second Model with different Parameters OLS Summary ( )
+            </h3>
+                    <div class="section-image">
+                <figure>
+                    <img src="M2_Files/ols_model2.png" alt="OLS Regression Results of Independent and Dependent Variables.">
+                    <figcaption>Figure 8. OLS Regression Results, 2nd Model, Step 8, Linear Regression</figcaption>
+                </figure>
+            
+
+
+    </section>
+
+
+
+
+
+</main>
+
+
+   
+
 
 <h3 class = "mile-h3">
      Click Bellow to Download Jupyter Notebook and CSV</h3>

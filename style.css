@@ -255,6 +255,14 @@ filter: drop-shadow(0 0 1.0rem #e00d06);
 
 
 /* Text styling */
+.section-text h1 {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: clamp(1rem, 3vw, 4rem);
+    color: #03174a;
+    background-color: #0ac0285c;
+}
+
+
 .section-text h2 {
     font-family: "Ribeye", serif;
     font-size: clamp(1.8rem, 3vw, 2.8rem);
