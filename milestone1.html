@@ -241,59 +241,100 @@
                 In this step 8, I used a Linear Regression Model to predict the total taxi fare amount <b>"total_amount"</b>. 
                 By using this model my goal was to understand how different variables change the total cost of a taxi ride. 
             </p>
+            <h3> Cleaning Data For Better Models</h3>
             <p>
                 Before I run the model, I had to remove one big outlier from my data. I found out this when making a graph after I created my model. 
-                I used the code <i>data2 = data2[data2['trip_distance'] < 150]</i> to remove any trip distance values above 150 miles. 
-                After I removed this, both of my model in step 8 improved a lot. Most trip distance were between 1 to 50 miles.
+                I used the code <i>data2 = data2[data2['trip_distance'] < 150]</i> to remove any trip distance values above 150 miles.
+                Most trip distance were between 1 to 50 miles.
+                ALso I removed <i>data2 = data2[data2['total_amount'] > 0]</i>. There were a lot of data ponts on the negative on the total amount. I think they are typos by the 
+                computer of the taxi or some human mistake. 
+                After I removed these, both of my model in step 8 and step 9 improved a huge amount. 
+            </p>
+            <p>
+                Later I also added these to cleaning codes to lower the P values on the <b>passenger_count</b> variable bellow: 
+            </p>
+            <p>
+                <i>
+                    data2 = data2[data2['trip_distance'] > 0.1]
+                </i>
+
+            </p>
+            <p>
+                <i>
+                    data2 = data2[(data2['passenger_count'] > 0) & (data2['passenger_count'] <= 6)]
+                </i>
             </p>
 
             <h3>
                 First Model OLS Summary ( )
             </h3>
+            <h3>Before Cleaning Data</h3>
         <div class="section-image">
                 <figure>
                     <img src="M2_Files/first_m_color.png" alt="OLS Regression Results of Independent and Dependent Variables.">
-                    <figcaption>Figure 7. OLS Regression Results, 1st Model, Step 8, Linear Regression</figcaption>
+                    <figcaption>Figure 7. OLS Regression Results, 1st Model, Step 8, Linear Regression, <b>Before Cleaning Data</b></figcaption>
+                </figure>
+                
+                <h3> After Cleaning Data</h3>
+                <div class="section-image">
+                <figure>
+                    <img src="File_2/OLS_1_color.jpg" alt="OLS Regression Results of Independent and Dependent Variables.">
+                    <figcaption>Figure 8. OLS Regression Results, 1st Model, Step 8, Linear Regression, <b>After Cleaning Data</b></figcaption>
                 </figure>
 
             <p>
                 For the first model, I only used the <b>trip distance </b> and <b> passenger counts</b> as independent variables. 
-                The R-Squared = 0.797, looks very good when using just two variables as independent variables. The Mean Squared Error is 90.22. 
+                The R-Squared = 0.892, looks very good when using just two variables as independent variables. The Mean Squared Error is 52.04.
+                The MSE is little high, can be better. 
             </p>
             <h3>
-                Second Model with different Parameters OLS Summary ( )
+                Second Model with different Parameters, OLS Summary ( )
             </h3>
+
+            <h3>Before Cleaning Data</h3>
                     <div class="section-image">
                 <figure>
                     <img src="M2_Files/ols_model2_color.png" alt="OLS Regression Results of Independent and Dependent Variables.">
-                    <figcaption>Figure 8. OLS Regression Results, 2nd Model, Step 8, Linear Regression</figcaption>
+                    <figcaption>Figure 9. OLS Regression Results, 2nd Model, Step 8, Linear Regression <b>Before Cleaning Data</b> </figcaption>
                 </figure>
+
+                <h3>After Cleaning Data</h3>
+
+                <div class="section-image">
+                <figure>
+                    <img src="File_2/OLS_2_color.jpg" alt="OLS Regression Results of Independent and Dependent Variables.">
+                    <figcaption>Figure 10. OLS Regression Results, 2nd Model, Step 8, Linear Regression <b>After Cleaning Data</b> </figcaption>
+                </figure>
+
+
             <p>
-                On this second model shown in Figure 8, I added few more parameters and that made improved the R-squared = 8.872. 
+                On this second model shown in Figure 10, I added few more parameters and that made improved the R-squared = 0.945. 
+                The mean_squared_error(y_test, y_pred) = 32.97.
+                The MSE is much smaller compair to the first model with few parameters. 
             </p>
             <p>
-                I added <b>Tip Amount</b> and <b>Tolls Amount</b>. These two variable improved the R-squared because they are part of the <b> total amount</b>. 
+                I added <b>Tip Amount</b> and <b>Tolls Amount</b>. These two variable improved the R-squared because they are part of the <b> total amount</b>.That's why we are seeing
+                much better R-Square and MSE.  
             </p>
             <p>
                 ALso both of my model's <b>p>/t/</b> values are very good. They are all below 0.5. So, I did not need to remove any variables because of that. 
             </p>
+
     
-                        <div class="section-image">
+                <div class="section-image">
                 <figure>
-                    <img src="M2_Files/Step8_1.png" alt="Scatter Plot of Actual Vs Predicted Amount in Taxi Fare from Model, Linear Regression">
-                    <figcaption>Figure 9. Actual Vs Predicted Total Amount Taxi Fare</figcaption>
+                    <img src="File_2/333.png" alt="Scatter Plot of Actual Vs Predicted Amount in Taxi Fare from Model, Linear Regression">
+                    <figcaption>Figure 11. Actual Vs Predicted Total Amount Taxi Fare</figcaption>
                 </figure>
                 <p>
-                    As we can see on figure 9, that the linear regression line is doing a pretty good job Predcting the Total fare from the actual values. 
-                    Still, the model is under estemiting some. We can see that a lot of the values on the graph is above <b>0</b>. A lot of the values are on <b>100 - 200</b>.     
-                    So, Some underestemiting, very little over estemiting. 
+                    As we can see on figure 9, that the linear regression line is doing a pretty good job Predcting the Total fare from the actual values.
                 </p>
             
                 
                 <div class="section-image">
                 <figure>
-                    <img src="M2_Files/step8_2.png" alt="Scatter Plot of Trip Distance Vs Total Far in Taxi Fare from Model, Linear Regression">
-                    <figcaption>Figure 10. Trip Distance Vs Total Fare</figcaption>
+                    <img src="File_2/444.png" alt="Scatter Plot of Trip Distance Vs Total Far in Taxi Fare from Model, Linear Regression">
+                    <figcaption>Figure 12. Trip Distance Vs Total Fare</figcaption>
                 </figure>
 
             <p>
@@ -327,8 +368,13 @@
             
             <div class="section-image">
                 <figure>
-                    <img src="M2_Files/KNN.png" alt="Scatter Plot of Actual VS Predicted Values - KNN Model, Color = Blue">
-                    <figcaption>Figure 11. Model - KNN - Actual VS Predicted Values</figcaption>
+                    <img src="File_2/knn_111.png" alt="Scatter Plot of Actual VS Predicted Values - KNN Model, Color = Blue">
+                    <figcaption>Figure 13. Model - KNN - Actual VS Predicted Values</figcaption>
+                </figure>
+
+                <div class="section-image">
+                <figure>
+                    <img src="File_2/Knn_R_color.jpg" alt="R-squared and MSE of the KNN Model">
                 </figure>
         <p>
             In this step 9, I used the K-Nearest-Neighbors (KNN) model algorithm to predict the total taxi cost. 
@@ -336,31 +382,34 @@
             On the other hand, KNN also look for the nearest data point in a datasets. Also known as "Good Neighbors"
         </p>
         <p>
-            The R-squared = <b> 0.90.</b> Higher compair to the Linear Regression Model, Which was <i>0.872.</i> 
+            The R-squared = <b> 0.96.</b> Higher compair to the Linear Regression Model, Which was <i>0.945.</i> 
         </p>
         <p>
-            mean_squared_error(y_test, y_pred_knn) = <b>50.46.</b> Lower compair to our Linear Regression Model, which was <i>0.87</i>.
+            mean_squared_error(y_test, y_pred_knn) = <b>17.87.</b> Lower compair to our Linear Regression Model, which was <i>32.97</i>.
         </p>
         <p>
             For the KNN model, Dependent Variable same as Linner Regression = <b>"total_amount"</b> and Independent variables 
-            are <b> ['trip_distance', 'tip_amount', 'tolls_amount']</b>. I used only the most important variables as independent variables for the KNN. 
+            are <b> ['trip_distance', 'passenger_count', 'tip_amount', 'tolls_amount'] </b>. I used only the most important variables as independent variables for the KNN. 
 
         </p>
             <div class="section-image">
                 <figure>
-                    <img src="M2_Files/KNN VS Linear.png" alt="Scatter Plot of KNN Vs Linear Model Graph">
-                    <figcaption>Figure 12. KNN VS Linear Model, Actual VS Predicted Total Cost</figcaption>
+                    <img src="File_2/knn_222.png" alt="Scatter Plot of KNN Vs Linear Model Graph">
+                    <figcaption>Figure 14. KNN VS Linear Model, Actual VS Predicted Total Cost</figcaption>
                 </figure>
         <p>
             This graph compares the performance of the Linear Regression model and the K-Nearest Neighbors (KNN) 
             model by plotting the actual taxi cost against the predicted values.
         </p>
         <p>
-            The Black line represent perfect predictions. The points closer to the black line indicate better model. 
+            The black line represent perfect predictions. The points closer to the black line indicate better model. 
             The KNN model shows a more tighter cluster of points compair to the Linear Model, Showing that KNN produces more accurate predictons. 
         </p>
-
-
+        <p>
+            So, at the end, I would use KNN model for my data. As we can see from the visual above that KNN is better performaing than Linear Regression. 
+            Also KNN produced better R-Squared and smaller Mean Squared Error compair to the Linear Regression model from Step 8. 
+        </p>
+        <p> So the <b>KNN</b> model is the winner.</p>
 
 
     </section>
@@ -375,11 +424,9 @@
    
 
 
-<h3 class = "mile-h3">
-     Click Bellow to Download Jupyter Notebook and CSV</h3>
+
 <div class = "download-btn" >
-    <a href="Files/M1-Imtiaz.ipynb" class="d-btn">⍖ Download Notebook ⍖</a>
-    <a href="Files/YTM123.csv" class="d-btn">⍖ Download CSV File ⍖</a>
+    <a href="Files/Imtiaz_Math_328.zip" class="d-btn">⍖ Download Notebook & CSV Files ⍖</a>
 </div>
 
 

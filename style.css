@@ -207,17 +207,18 @@ color: rgb(0, 2, 2);
     text-decoration: none;
 }
 .d-btn{
-    background-color: #0a77c069;
-    padding: 1rem;
+    background-color: #c8e20769;
+    padding: 1.2rem;
     color: #000000;
     backdrop-filter: blur(1000px); 
     -webkit-backdrop-filter: blur(1000px);
     filter: drop-shadow(0 0 0.95rem rgb(29, 167, 11));
-     text-decoration:double;
+    text-decoration:double;
+    cursor: url("File_2/file.png"), auto;
 
 }
 .d-btn:hover{
-transform: translateY(-5px);
+transform: translateY(-8px);
 box-shadow: 0 10px 20px rgba(235, 5, 170, 0.54); /* Glow matches the button color */
 filter: drop-shadow(0 0 1.0rem #e00d06);
 }
