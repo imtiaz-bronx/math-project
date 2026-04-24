@@ -21,7 +21,7 @@ This project explores and visualizes **NYC Open Data** focusing on Yellow Cab ta
 **Imtiaz Mahmud**,
 * *Student at Lehman College, City University of New York* 
 * *Major: Earth Science*
-* imtiazmahmud.com
+* [My Website](https://imtiazmahmud.com)
 
 ---
 * *Created for Math 328 - Spring 2026*
