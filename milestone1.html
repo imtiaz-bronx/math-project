@@ -420,6 +420,103 @@
 
 </main>
 
+<h3 class = "mile-h3">
+     ▽ Final Milestone ↓</h3>
+
+<main class="milestone-main"> 
+        <section class = "content-section">
+        <div class=" section-text">
+            <h1>
+                Final Milestone -> Analysis ⇣
+            </h1>
+            <h2>
+                Step 10
+            </h2>
+            <h3>
+                SNS Heatmap
+            </h3>
+
+            <p> corr = data2[["trip_distance", "tip_amount", "tolls_amount", "passenger_count", "total_amount"]].corr() </p>
+            <p>
+                sns.heatmap(corr, annot = True, cmap = "coolwarm")
+            </p>
+            <div class="section-image">
+                <figure>
+                    <img src="Files/heatmap.png" alt="SNS Heatmap of the Taxi Data">
+                    <figcaption>Figure 15. SNS Heatmap of the Taxi Data</figcaption>
+                </figure>
+            </div>
+        <p>
+            In this step 10, I used few important quantitative variables of the taxi data and created a SNS heatmap. 
+        </p>
+        <p>
+            The trip distance and the total amount has the highest amount of correlation. 
+            That make sence, the taxi will make more money the farther he/she driver.
+        </p>
+        <P>
+            The SNS heatmap shows the correlation between two variables. 1 is the strongest correlation, 
+            0 is weak or no correlation and -1 is strong negative correlation. In our graph we do not have any 
+            negative correlation. All the 1's are same variables. 
+        </P>
+        <p>
+            One important thing that stand out on my graph,
+            is that passenger count do have any good correlation
+            with any other quantitative variables. The second place is the tip amount. 
+            Other than passenger count and tip amount all the other variables and 
+            fairly good correlation one another.
+        </p>
+        <p>
+            Also there is a positive correlation between tip amount and trip distance. 
+            This shows that people tend to leave larger tips when travling a long distance.
+            But does not have a good correlation with passenger count. So, we can conclude that 
+            a larger group of people will not leave a learge tips. 
+        </p>
+    
+    </div>
+    </section>
+
+
+    <section class = "content-section">
+        <div class=" section-text">
+            <h2>
+                Step 11 ⇣
+            </h2>
+            <h3>
+                SNS BoxPlot of Taxi Data
+            </h3>
+
+            <p>
+                sns.boxplot(x="passenger_count", y="total_amount", data=data2)
+            </p>
+            <div class="section-image">
+                <figure>
+                    <img src="Files/boxmap.png" alt="Figure 15. SNS Boxplot of passenger count & Total Amount">
+                    <figcaption>Figure 15. SNS Boxplot of passenger Counts & Total Amount</figcaption>
+                </figure>
+            </div>
+
+            <p>
+                This box plot supports my heatmap above. That passenger counts
+                does not strongely affect the total amount.
+            </p>
+            <p>
+                If you look at the box sizes on this graph, you can see that all the boxes are the same 
+                size for 1 - 6 passengers. 
+            </p>
+            <p>
+                All the blacks dots are outliers. Mostely long distance trips. 
+                For passenger 1, they might be expensive airports rides. 
+            </p>
+
+
+        </div>
+    </section>
+
+
+</main>
+
+
+
 
    
 
